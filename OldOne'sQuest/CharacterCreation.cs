@@ -28,20 +28,16 @@ namespace OldOne_sQuest
 
         void GenerateNames()
         {
-            string[,] WizardNames = { { "Flubster","Gandalf","Hairy","Harry","John","Moldywart","Gingelmash","Gilgamesh","Gigglemesh","Uruk","Sumer","Tommy","Luke","Quincy","Penelope","Bingle","Frengle","Frodo","Freddo","Cadbury","Tesco"} , {"The Wise","The Great","The Grey","The Flabby","The Disintegrated","The Powerful","The Undefeated","The Still Living","The Defeated","Liver","The Pope","Gell","Sainsbury","Baggins","Potter","The Throngled","The Drowned","The Refleshed","The Fetus","The Flabster","Flubberbelly"} };
             int name1num = Stats.random.Next(0,20);
             int name2num = Stats.random.Next(0,20);
             int name3num = Stats.random.Next(0,20);
             int name4num = Stats.random.Next(0, 20);
             int name5num = Stats.random.Next(0, 20);
             int name6num = Stats.random.Next(0, 20);
-            int ainamenum = Stats.random.Next(0, 20);
-            int ainamenum2 = Stats.random.Next(0, 20);
 
-            name1 = WizardNames[0,name1num] + " " + WizardNames[1,name4num];
-            name2 = WizardNames[0, name2num] + " " + WizardNames[1, name5num];
-            name3 = WizardNames[0, name3num] + " " + WizardNames[1, name6num];
-            Stats.EName = WizardNames[0, ainamenum] + " " + WizardNames[1, ainamenum2];
+            name1 = Stats.WizardNames[0,name1num] + " " + Stats.WizardNames[1,name4num];
+            name2 = Stats.WizardNames[0, name2num] + " " + Stats.WizardNames[1, name5num];
+            name3 = Stats.WizardNames[0, name3num] + " " + Stats.WizardNames[1, name6num];
 
             btnName1.Text = name1;
             btnName2.Text = name2;

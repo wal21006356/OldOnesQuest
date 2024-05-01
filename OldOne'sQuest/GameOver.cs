@@ -15,6 +15,7 @@ namespace OldOne_sQuest
         public GameOver()
         {
             InitializeComponent();
+            lblDays.Text = "You survived until Day " + Stats.Days.ToString();
         }
     }
 }

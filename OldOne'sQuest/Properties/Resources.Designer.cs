@@ -93,6 +93,26 @@ namespace OldOne_sQuest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap funenemy {
+            get {
+                object obj = ResourceManager.GetObject("funenemy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HobHor {
+            get {
+                object obj = ResourceManager.GetObject("HobHor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Turtlewizard {
             get {
                 object obj = ResourceManager.GetObject("Turtlewizard", resourceCulture);
