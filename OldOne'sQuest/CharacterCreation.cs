@@ -78,5 +78,41 @@ namespace OldOne_sQuest
                 RefreshLabels();
             }
         }
+
+        private void btnEarth_Click(object sender, EventArgs e)
+        {
+            Stats.PElement = "Earth";
+            btnEarth.Enabled = false;
+            btnAir.Enabled = true;
+            btnFire.Enabled = true;
+            btnWater.Enabled = true;
+        }
+
+        private void btnWater_Click(object sender, EventArgs e)
+        {
+            Stats.PElement = "Water";
+            btnEarth.Enabled = true;
+            btnAir.Enabled = true;
+            btnFire.Enabled = true;
+            btnWater.Enabled = false;
+        }
+
+        private void btnFire_Click(object sender, EventArgs e)
+        {
+            Stats.PElement = "Fire";
+            btnEarth.Enabled = true;
+            btnAir.Enabled = true;
+            btnFire.Enabled = false;
+            btnWater.Enabled = true;
+        }
+
+        private void btnAir_Click(object sender, EventArgs e)
+        {
+            Stats.PElement = "Air";
+            btnEarth.Enabled = true;
+            btnAir.Enabled = false;
+            btnFire.Enabled = true;
+            btnWater.Enabled = true;
+        }
     }
 }

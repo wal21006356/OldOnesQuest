@@ -60,6 +60,7 @@
             this.btnEarth.TabIndex = 0;
             this.btnEarth.Text = "Earth";
             this.btnEarth.UseVisualStyleBackColor = false;
+            this.btnEarth.Click += new System.EventHandler(this.btnEarth_Click);
             // 
             // btnWater
             // 
@@ -73,6 +74,7 @@
             this.btnWater.TabIndex = 1;
             this.btnWater.Text = "Water";
             this.btnWater.UseVisualStyleBackColor = false;
+            this.btnWater.Click += new System.EventHandler(this.btnWater_Click);
             // 
             // btnFire
             // 
@@ -86,6 +88,7 @@
             this.btnFire.TabIndex = 2;
             this.btnFire.Text = "Fire";
             this.btnFire.UseVisualStyleBackColor = false;
+            this.btnFire.Click += new System.EventHandler(this.btnFire_Click);
             // 
             // btnAir
             // 
@@ -99,6 +102,7 @@
             this.btnAir.TabIndex = 3;
             this.btnAir.Text = "Air";
             this.btnAir.UseVisualStyleBackColor = false;
+            this.btnAir.Click += new System.EventHandler(this.btnAir_Click);
             // 
             // btnName2
             // 
