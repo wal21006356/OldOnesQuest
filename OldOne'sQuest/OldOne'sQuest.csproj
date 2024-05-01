@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stats.cs" />
     <EmbeddedResource Include="CharacterCreation.resx">
       <DependentUpon>CharacterCreation.cs</DependentUpon>
     </EmbeddedResource>

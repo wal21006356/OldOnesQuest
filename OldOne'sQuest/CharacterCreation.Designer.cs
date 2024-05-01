@@ -45,6 +45,7 @@
             this.lblMaxHP = new System.Windows.Forms.Label();
             this.lblWisdom = new System.Windows.Forms.Label();
             this.lblDexterity = new System.Windows.Forms.Label();
+            this.lblSkillPoints = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEarth
@@ -255,11 +256,22 @@
             this.lblDexterity.Text = "Dexterity: 0";
             this.lblDexterity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblSkillPoints
+            // 
+            this.lblSkillPoints.AutoSize = true;
+            this.lblSkillPoints.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSkillPoints.Location = new System.Drawing.Point(343, 339);
+            this.lblSkillPoints.Name = "lblSkillPoints";
+            this.lblSkillPoints.Size = new System.Drawing.Size(75, 15);
+            this.lblSkillPoints.TabIndex = 16;
+            this.lblSkillPoints.Text = "Skillpoints: 0";
+            // 
             // CharacterCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSkillPoints);
             this.Controls.Add(this.lblDexterity);
             this.Controls.Add(this.lblWisdom);
             this.Controls.Add(this.lblMaxHP);
@@ -302,6 +314,7 @@
         private System.Windows.Forms.Label lblMaxHP;
         private System.Windows.Forms.Label lblWisdom;
         private System.Windows.Forms.Label lblDexterity;
+        private System.Windows.Forms.Label lblSkillPoints;
     }
 }
 
