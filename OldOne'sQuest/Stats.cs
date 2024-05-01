@@ -14,5 +14,8 @@ namespace OldOne_sQuest
         public static int PMaxHP = 100;
         public static int PDexterity = 30;
         public static string PName;
+        public static string EName;
+        public static int EHealth;
+        public static Random random = new Random();
     }
 }
