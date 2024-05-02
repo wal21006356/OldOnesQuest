@@ -16,40 +16,44 @@ namespace OldOne_sQuest
         public BattleScreen()
         {
             InitializeComponent();
-            GenerateStats();            
+            GenerateStats();
             RefreshValues();
             DecideAdvantage();
         }
 
-        int PHealth;
+        int PHealth; //playerhealth, but not declared with a value as it gets assigned in the GenerateStats function
         static int EMaxHP; //this one has to be static or vstudio throws a tantrum
-        int EWisdom;
-        int EDexterity;
-        int lowerAIRand = 25;
-        int upperAIRand = 35;
-        int lowerAIHealth = 95;
-        int upperAIHealth = 110;
-        int PDamage;
-        int EDamage;
+        int EWisdom;//enemy wisdom
+        int EDexterity;//enemy dexterity
+        //i need these boundaries so that when the player defeats a wizard, the next one can have bigger stats and be harder to defeat
+        int lowerAIRand = 25;//sets the lower boundary that the ai can have wisdom and dex for
+        int upperAIRand = 35;//sets the the same but the upper boundary
+        int lowerAIHealth = 95;//the lower boundary of the ai health
+        int upperAIHealth = 110;//the upper health
+        int PDamage;//player damage variable which I'm using so that when someone has advantage their damage is scaled up
+        int EDamage;//ai damage
 
 
-        private void GenerateStats()
+
+        private void GenerateStats() //generates the stats
         {
-            PHealth = Stats.PMaxHP;
-            EMaxHP = Stats.random.Next(lowerAIHealth, upperAIHealth);
+            PHealth = Stats.PMaxHP; //generate player health from the maxHP they decided on the character creation screen
+            EMaxHP = Stats.random.Next(lowerAIHealth, upperAIHealth); //generates the enemy's maxHP, i would just generate the enemy health, but MaxHP is needed for the progressbars as they are refreshed every attack
             Stats.EHealth = EMaxHP;
-            EWisdom = Stats.random.Next(lowerAIRand, upperAIRand);
+            EWisdom = Stats.random.Next(lowerAIRand, upperAIRand);//using the upper and lower bounds to generate the wisdom and dexterity
             EDexterity = Stats.random.Next(lowerAIRand, upperAIRand);
-            PDamage = Stats.PWisdom;
+            PDamage = Stats.PWisdom;//the damage is decided by the wisdom
             EDamage = EWisdom;
-            Stats.EElement = Stats.random.Next(0, 3);
+            Stats.EElement = Stats.random.Next(0, 3); //chooses the enemy's element
 
-            int ainamenum = Stats.random.Next(0, 20);
+            int ainamenum = Stats.random.Next(0, 20); //generates the enemy's name using these two numbers
             int ainamenum2 = Stats.random.Next(0, 20);
             Stats.EName = Stats.WizardNames[0, ainamenum] + " " + Stats.WizardNames[1, ainamenum2];
             Stats.Funenemy = Stats.random.Next(1,50);
         }
-        private void RefreshValues()
+
+
+        private void RefreshValues() //refreshes all the values onscreen
         {
             lblPName.Text = "Player Name: "+Stats.PName;
             lblEName.Text = "Enemy Name: "+Stats.EName;
@@ -68,7 +72,7 @@ namespace OldOne_sQuest
             {
                 prbrEDexterity.Maximum = EDexterity;
             }
-            prbrPHealth.Maximum = Stats.PMaxHP;
+            prbrPHealth.Maximum = Stats.PMaxHP; //progress bars go higher and lower in the wind
             prbrEHealth.Maximum = EMaxHP;
             prbrPHealth.Value = PHealth;
             prbrEHealth.Value = Stats.EHealth;
