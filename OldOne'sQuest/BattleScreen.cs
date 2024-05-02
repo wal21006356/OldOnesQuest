@@ -203,10 +203,10 @@ namespace OldOne_sQuest
 
         void Win()
         {
-            lowerAIHealth += 5;
-            upperAIHealth += 5;
-            lowerAIRand += 5;
-            upperAIRand += 5;
+            lowerAIHealth += 1;
+            upperAIHealth += 2;
+            lowerAIRand += 1;
+            upperAIRand += 2;
             Stats.Days += 1;
             GenerateStats();
         }
