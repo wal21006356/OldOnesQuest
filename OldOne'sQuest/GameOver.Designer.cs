@@ -33,6 +33,7 @@
             this.lblDays = new System.Windows.Forms.Label();
             this.lblLeaderboard = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnRestart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,11 +79,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnRestart
+            // 
+            this.btnRestart.Font = new System.Drawing.Font("Edwardian Script ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestart.Location = new System.Drawing.Point(12, 402);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(140, 36);
+            this.btnRestart.TabIndex = 4;
+            this.btnRestart.Text = "Restart";
+            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
             // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblLeaderboard);
             this.Controls.Add(this.lblDays);
@@ -102,5 +115,6 @@
         private System.Windows.Forms.Label lblDays;
         private System.Windows.Forms.Label lblLeaderboard;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnRestart;
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="CharacterCreation.Designer.cs">
       <DependentUpon>CharacterCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="GameOver.cs">
       <SubType>Form</SubType>
     </Compile>

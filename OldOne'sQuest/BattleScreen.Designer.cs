@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BattleScreen));
             this.imgEWizard = new System.Windows.Forms.PictureBox();
             this.imgPWizard = new System.Windows.Forms.PictureBox();
@@ -46,6 +47,9 @@
             this.lblEHealth = new System.Windows.Forms.Label();
             this.lblEWisdom = new System.Windows.Forms.Label();
             this.lblEDexterity = new System.Windows.Forms.Label();
+            this.timerMusic = new System.Windows.Forms.Timer(this.components);
+            this.lblDay = new System.Windows.Forms.Label();
+            this.lblAdvantage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgEWizard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPWizard)).BeginInit();
             this.SuspendLayout();
@@ -112,7 +116,7 @@
             this.btnBattle.Name = "btnBattle";
             this.btnBattle.Size = new System.Drawing.Size(93, 34);
             this.btnBattle.TabIndex = 6;
-            this.btnBattle.Text = "button1";
+            this.btnBattle.Text = "Attack!";
             this.btnBattle.UseVisualStyleBackColor = false;
             this.btnBattle.Click += new System.EventHandler(this.btnBattle_Click);
             // 
@@ -231,11 +235,40 @@
             this.lblEDexterity.TabIndex = 19;
             this.lblEDexterity.Text = "Dexterity: ";
             // 
+            // timerMusic
+            // 
+            this.timerMusic.Interval = 120000;
+            this.timerMusic.Tick += new System.EventHandler(this.TimerMusicTick);
+            // 
+            // lblDay
+            // 
+            this.lblDay.AutoSize = true;
+            this.lblDay.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDay.Location = new System.Drawing.Point(735, 9);
+            this.lblDay.Name = "lblDay";
+            this.lblDay.Size = new System.Drawing.Size(53, 20);
+            this.lblDay.TabIndex = 20;
+            this.lblDay.Text = "Day: 0";
+            // 
+            // lblAdvantage
+            // 
+            this.lblAdvantage.AutoSize = true;
+            this.lblAdvantage.Font = new System.Drawing.Font("Comic Sans MS", 10.5F);
+            this.lblAdvantage.Location = new System.Drawing.Point(331, 168);
+            this.lblAdvantage.MaximumSize = new System.Drawing.Size(139, 0);
+            this.lblAdvantage.Name = "lblAdvantage";
+            this.lblAdvantage.Size = new System.Drawing.Size(139, 19);
+            this.lblAdvantage.TabIndex = 21;
+            this.lblAdvantage.Text = "You have Advantage!";
+            this.lblAdvantage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // BattleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblAdvantage);
+            this.Controls.Add(this.lblDay);
             this.Controls.Add(this.lblEDexterity);
             this.Controls.Add(this.lblEWisdom);
             this.Controls.Add(this.lblEHealth);
@@ -282,5 +315,8 @@
         private System.Windows.Forms.Label lblEHealth;
         private System.Windows.Forms.Label lblEWisdom;
         private System.Windows.Forms.Label lblEDexterity;
+        private System.Windows.Forms.Timer timerMusic;
+        private System.Windows.Forms.Label lblDay;
+        private System.Windows.Forms.Label lblAdvantage;
     }
 }
