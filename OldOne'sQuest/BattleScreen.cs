@@ -259,9 +259,6 @@ namespace OldOne_sQuest
             CharacterCreation form = new CharacterCreation();
             form.Show();//sends the user back to the character creator
             this.Hide();
-            while (true){
-
-            }
         }
 
         void Lose()
